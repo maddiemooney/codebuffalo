@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Text;
+using System.Threading.Tasks;
+using codebuffalo.Data;
 
 namespace codebuffalo.Helpers
 {
@@ -52,6 +54,24 @@ namespace codebuffalo.Helpers
                 Console.WriteLine(e.ToString());
             }
             Console.ReadLine();
+        }
+
+        public Task<Account> GetAccount()
+        {
+            Account test = new Account();
+            test.UserID = "123";
+            test.FirstName = "Mike";
+            test.LastName = "Hawk";
+            test.Email = "mhawk@test.com";
+            test.City = "Coolsville";
+            test.State = "New Fuck";
+            test.Country = "USA";
+            test.Radius = "50";
+            test.PhoneNumber = "4444444444";
+            test.DOB = "01011900";
+
+            return Task.FromResult(test);
+
         }
 
     }

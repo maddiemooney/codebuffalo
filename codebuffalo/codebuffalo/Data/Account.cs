@@ -15,24 +15,16 @@ namespace codebuffalo.Data
 
         }
 
-        private String UserID { get; set; }
-        private String FirstName { get; set; }
-        private String LastName { get; set; }
-        private String Email { get; set; }
-        private String City { get; set; }
-        private String State { get; set; }
-        private String Country { get; set; }
-        private String Radius { get; set; }
-        private String PhoneNumber { get; set; }
-        private String DOB { get; set; }
-
-
-        public Task<String> SetDefaults()
-        {
-            return Task.FromResult("yes");
-        }
-
-
+        public String UserID { get; set; }
+        public String FirstName { get; set; }
+        public String LastName { get; set; }
+        public String Email { get; set; }
+        public String City { get; set; }
+        public String State { get; set; }
+        public String Country { get; set; }
+        public String Radius { get; set; }
+        public String PhoneNumber { get; set; }
+        public String DOB { get; set; }
 
     }
 }
