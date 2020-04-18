@@ -1,0 +1,26 @@
+﻿@page "/profile"
+@using codebuffalo.Data;
+@inject Account User
+
+<h1>User Profile</h1>
+
+<p>Current count: @currentCount</p>
+<p>Squirtle? @cool</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Edit Profile</button>
+
+@code {
+
+    private int currentCount = 0;
+    String cool = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        cool = await User.Yes();
+    }
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
