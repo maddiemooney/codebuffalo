@@ -15,14 +15,19 @@ namespace codebuffalo.Data
 
         }
 
-        public string XboxUsername { get; set; }
-        public string PSUsername { get; set; }
-        public string SteamUsername { get; set; }
-        public string test { get; set; }
+        private String UserID { get; set; }
+        private String FirstName { get; set; }
+        private String LastName { get; set; }
+        private String Email { get; set; }
+        private String City { get; set; }
+        private String State { get; set; }
+        private String Country { get; set; }
+        private String Radius { get; set; }
+        private String PhoneNumber { get; set; }
+        private String DOB { get; set; }
 
-        public int Radius { get; set; }
 
-        public Task<String> Yes()
+        public Task<String> SetDefaults()
         {
             return Task.FromResult("yes");
         }

@@ -16,7 +16,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        cool = await User.Yes();
+        cool = await User.SetDefaults();
     }
 
     private void IncrementCount()
